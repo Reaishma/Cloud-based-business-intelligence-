@@ -23,7 +23,8 @@ A comprehensive cloud-based business intelligence platform featuring machine lea
 
 ## 🏗️ Architecture
 
-''''
+'''
+
 │   ├── Main Dashboard
 │   ├── ML Workflows
 │   ├── Model Performance
