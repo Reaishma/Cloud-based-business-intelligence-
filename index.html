@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud BI Platform - ML Analytics</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-chart-line"></i> Cloud BI Platform</h2>
+            <p class="subtitle">Amazon SageMaker Simulation</p>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="#dashboard" class="nav-link active" data-page="dashboard">
+                    <i class="fas fa-tachometer-alt"></i> Dashboard
+                </a></li>
+                <li><a href="#ml-workflows" class="nav-link" data-page="ml-workflows">
+                    <i class="fas fa-cogs"></i> ML Workflows
+                </a></li>
+                <li><a href="#model-performance" class="nav-link" data-page="model-performance">
+                    <i class="fas fa-chart-bar"></i> Model Performance
+                </a></li>
+                <li><a href="#business-insights" class="nav-link" data-page="business-insights">
+                    <i class="fas fa-lightbulb"></i> Business Insights
+                </a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Dashboard Page -->
+        <div id="dashboard" class="page active">
+            <header class="page-header">
+                <h1><i class="fas fa-chart-line"></i> Cloud Business Intelligence Platform</h1>
+                <p class="subtitle">AI-Powered Analytics & Predictive Insights</p>
+            </header>
+
+            <!-- KPI Cards -->
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <h3>ML Models Deployed</h3>
+                        <div class="kpi-value">12</div>
+                        <div class="kpi-change positive">+2</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <h3>Active Pipelines</h3>
+                        <div class="kpi-value">8</div>
+                        <div class="kpi-change positive">+1</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-chart-area"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <h3>Predictions Today</h3>
+                        <div class="kpi-value">2,847</div>
+                        <div class="kpi-change positive">+142</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <h3>Avg Model Accuracy</h3>
+                        <div class="kpi-value">92.4%</div>
+                        <div class="kpi-change positive">+1.2%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Tabs -->
+            <div class="tab-container">
+                <div class="tab-nav">
+                    <button class="tab-button active" data-tab="realtime">
+                        <i class="fas fa-chart-line"></i> Real-time Dashboard
+                    </button>
+                    <button class="tab-button" data-tab="predictive">
+                        <i class="fas fa-crystal-ball"></i> Predictive Analytics
+                    </button>
+                    <button class="tab-button" data-tab="overview">
+                        <i class="fas fa-list"></i> Model Overview
+                    </button>
+                </div>
+
+                <!-- Real-time Dashboard Tab -->
+                <div id="realtime" class="tab-content active">
+                    <h2>Real-time Business Metrics</h2>
+                    
+                    <div class="chart-grid">
+                        <div class="chart-container">
+                            <h3>Daily Sales Performance (Last 30 Days)</h3>
+                            <div id="sales-chart" class="chart"></div>
+                        </div>
+
+                        <div class="chart-container">
+                            <h3>Customer Segments Distribution</h3>
+                            <div id="segments-chart" class="chart"></div>
+                        </div>
+                    </div>
+
+                    <div class="revenue-section">
+                        <h3>Revenue Analytics</h3>
+                        <div class="chart-container full-width">
+                            <div id="revenue-chart" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- Predictive Analytics Tab -->
+                <div id="predictive" class="tab-content">
+                    <h2>AI-Powered Predictions</h2>
+                    
+                    <div class="prediction-grid">
+                        <div class="prediction-section">
+                            <h3>Sales Forecasting</h3>
+                            <div id="forecast-chart" class="chart"></div>
+                            <div class="forecast-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-label">Predicted Growth</span>
+                                    <span class="metric-value">+12.5%</span>
+                                    <span class="metric-change">+2.3%</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-label">Confidence Level</span>
+                                    <span class="metric-value">94.2%</span>
+                                    <span class="metric-change">+1.1%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="prediction-section">
+                            <h3>Customer Lifetime Value Prediction</h3>
+                            <div id="clv-chart" class="chart"></div>
+                        </div>
+                    </div>
+
+                    <div class="churn-analysis">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Churn Risk Analysis</h3>
+                        <div class="churn-metrics">
+                            <div class="churn-metric high-risk">
+                                <h4>High Risk</h4>
+                                <div class="value">342</div>
+                            </div>
+                            <div class="churn-metric medium-risk">
+                                <h4>Medium Risk</h4>
+                                <div class="value">567</div>
+                            </div>
+                            <div class="churn-metric low-risk">
+                                <h4>Low Risk</h4>
+                                <div class="value">891</div>
+                            </div>
+                        </div>
+                        <div id="churn-chart" class="chart"></div>
+                    </div>
+                </div>
+
+                <!-- Model Overview Tab -->
+                <div id="overview" class="tab-content">
+                    <h2>ML Model Portfolio</h2>
+                    
+                    <div class="models-grid">
+                        <div class="model-card">
+                            <h3>Sales Forecasting Model</h3>
+                            <div class="model-details">
+                                <p><strong>Type:</strong> Time Series (ARIMA + ML)</p>
+                                <p><strong>Accuracy:</strong> 94.2%</p>
+                                <p><strong>Status:</strong> <span class="status active">Active</span></p>
+                                <p><strong>Predictions Today:</strong> 1,247</p>
+                            </div>
+                        </div>
+                        <div class="model-card">
+                            <h3>Customer Segmentation Model</h3>
+                            <div class="model-details">
+                                <p><strong>Type:</strong> K-Means Clustering</p>
+                                <p><strong>Accuracy:</strong> 89.7%</p>
+                                <p><strong>Status:</strong> <span class="status active">Active</span></p>
+                                <p><strong>Predictions Today:</strong> 856</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ML Workflows Page -->
+        <div id="ml-workflows" class="page">
+            <header class="page-header">
+                <h1><i class="fas fa-cogs"></i> ML Workflows & Pipeline Management</h1>
+                <p class="subtitle">Simulated Amazon SageMaker Workflows</p>
+            </header>
+
+            <div class="workflow-selector">
+                <label for="workflow-select">Select ML Workflow:</label>
+                <select id="workflow-select">
+                    <option value="sales-forecasting">Sales Forecasting Pipeline</option>
+                    <option value="customer-segmentation">Customer Segmentation Pipeline</option>
+                    <option value="churn-prediction">Churn Prediction Pipeline</option>
+                    <option value="price-optimization">Price Optimization Pipeline</option>
+                </select>
+            </div>
+
+            <div class="workflow-content">
+                <div id="sales-forecasting" class="workflow-panel active">
+                    <h2>Sales Forecasting Pipeline</h2>
+                    <div class="workflow-grid">
+                        <div class="workflow-config">
+                            <h3>Pipeline Configuration</h3>
+                            <div class="config-form">
+                                <div class="form-group">
+                                    <label>Data Source:</label>
+                                    <select>
+                                        <option>Sales Database</option>
+                                        <option>Data Warehouse</option>
+                                        <option>S3 Bucket</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Forecast Horizon (days):</label>
+                                    <input type="range" min="7" max="90" value="30" id="horizon-slider">
+                                    <span id="horizon-value">30</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Model Type:</label>
+                                    <select>
+                                        <option>ARIMA + ML Hybrid</option>
+                                        <option>Prophet</option>
+                                        <option>LSTM</option>
+                                        <option>XGBoost Time Series</option>
+                                    </select>
+                                </div>
+                                <button class="execute-btn" onclick="executePipeline()">
+                                    <i class="fas fa-rocket"></i> Execute Pipeline
+                                </button>
+                            </div>
+                        </div>
+                        <div class="workflow-execution">
+                            <h3>Pipeline Execution</h3>
+                            <div id="execution-log" class="execution-log">
+                                <p>Ready to execute pipeline...</p>
+                            </div>
+                            <div id="execution-results" class="execution-results"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Model Performance Page -->
+        <div id="model-performance" class="page">
+            <header class="page-header">
+                <h1><i class="fas fa-chart-bar"></i> Model Performance Analytics</h1>
+                <p class="subtitle">Comprehensive ML Model Evaluation & Monitoring</p>
+            </header>
+
+            <div class="model-selector">
+                <label for="model-select">Select Model for Analysis:</label>
+                <select id="model-select">
+                    <option value="sales-forecasting">Sales Forecasting Model</option>
+                    <option value="customer-segmentation">Customer Segmentation Model</option>
+                    <option value="churn-prediction">Churn Prediction Model</option>
+                    <option value="price-optimization">Price Optimization Model</option>
+                </select>
+            </div>
+
+            <div class="performance-overview">
+                <h2>Performance Overview</h2>
+                <div class="performance-kpis">
+                    <div class="performance-metric">
+                        <h3>Overall Accuracy</h3>
+                        <div class="metric-value">92.4%</div>
+                        <div class="metric-trend">+1.2%</div>
+                    </div>
+                    <div class="performance-metric">
+                        <h3>Precision</h3>
+                        <div class="metric-value">89.7%</div>
+                        <div class="metric-trend">+0.8%</div>
+                    </div>
+                    <div class="performance-metric">
+                        <h3>Recall</h3>
+                        <div class="metric-value">91.2%</div>
+                        <div class="metric-trend">+1.1%</div>
+                    </div>
+                    <div class="performance-metric">
+                        <h3>F1 Score</h3>
+                        <div class="metric-value">90.4%</div>
+                        <div class="metric-trend">+0.9%</div>
+                    </div>
+                </div>
+                <div class="performance-trend">
+                    <h3>Performance Trend (Last 30 Days)</h3>
+                    <div id="performance-trend-chart" class="chart"></div>
+                </div>
+            </div>
+
+            <div class="performance-tabs">
+                <div class="tab-nav">
+                    <button class="tab-button active" data-tab="metrics">Performance Metrics</button>
+                    <button class="tab-button" data-tab="validation">Model Validation</button>
+                    <button class="tab-button" data-tab="features">Feature Analysis</button>
+                    <button class="tab-button" data-tab="monitoring">Real-time Monitoring</button>
+                </div>
+
+                <div id="metrics" class="tab-content active">
+                    <h3>Detailed Performance Metrics</h3>
+                    <div class="metrics-grid">
+                        <div class="metric-chart">
+                            <h4>Confusion Matrix</h4>
+                            <div id="confusion-matrix" class="chart"></div>
+                        </div>
+                        <div class="metric-chart">
+                            <h4>ROC Curve</h4>
+                            <div id="roc-curve" class="chart"></div>
+                        </div>
+                        <div class="metric-chart">
+                            <h4>Precision-Recall Curve</h4>
+                            <div id="pr-curve" class="chart"></div>
+                        </div>
+                        <div class="metric-chart">
+                            <h4>Feature Importance</h4>
+                            <div id="feature-importance" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="validation" class="tab-content">
+                    <h3>Cross-Validation Results</h3>
+                    <div class="validation-content">
+                        <div class="cv-scores">
+                            <h4>Cross-Validation Scores</h4>
+                            <div id="cv-scores-chart" class="chart"></div>
+                        </div>
+                        <div class="learning-curves">
+                            <h4>Learning Curves</h4>
+                            <div id="learning-curves-chart" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="features" class="tab-content">
+                    <h3>Feature Analysis & Importance</h3>
+                    <div class="feature-analysis">
+                        <div class="feature-importance-chart">
+                            <h4>Feature Importance Ranking</h4>
+                            <div id="feature-ranking" class="chart"></div>
+                        </div>
+                        <div class="feature-correlation">
+                            <h4>Feature Correlation Matrix</h4>
+                            <div id="correlation-matrix" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="monitoring" class="tab-content">
+                    <h3>Real-time Model Monitoring</h3>
+                    <div class="monitoring-dashboard">
+                        <div class="monitoring-metrics">
+                            <div class="monitoring-metric">
+                                <h4>Response Time</h4>
+                                <div class="metric-value">45ms</div>
+                                <div class="metric-status good">Good</div>
+                            </div>
+                            <div class="monitoring-metric">
+                                <h4>Prediction Volume</h4>
+                                <div class="metric-value">1,247/hr</div>
+                                <div class="metric-status good">Normal</div>
+                            </div>
+                            <div class="monitoring-metric">
+                                <h4>Error Rate</h4>
+                                <div class="metric-value">0.12%</div>
+                                <div class="metric-status good">Low</div>
+                            </div>
+                            <div class="monitoring-metric">
+                                <h4>Data Drift</h4>
+                                <div class="metric-value">0.08</div>
+                                <div class="metric-status warning">Monitor</div>
+                            </div>
+                        </div>
+                        <div class="monitoring-charts">
+                            <div id="response-time-chart" class="chart"></div>
+                            <div id="data-drift-chart" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Business Insights Page -->
+        <div id="business-insights" class="page">
+            <header class="page-header">
+                <h1><i class="fas fa-lightbulb"></i> AI-Powered Business Insights</h1>
+                <p class="subtitle">Strategic Intelligence & Recommendations</p>
+            </header>
+
+            <div class="executive-summary">
+                <h2>Executive Summary</h2>
+                <div class="summary-kpis">
+                    <div class="summary-metric">
+                        <h3>Revenue Growth</h3>
+                        <div class="metric-value">12.3%</div>
+                        <div class="metric-trend">+2.1%</div>
+                    </div>
+                    <div class="summary-metric">
+                        <h3>New Customers</h3>
+                        <div class="metric-value">247</div>
+                        <div class="metric-trend">+23</div>
+                    </div>
+                    <div class="summary-metric">
+                        <h3>Churn Rate</h3>
+                        <div class="metric-value">4.2%</div>
+                        <div class="metric-trend">-1.3%</div>
+                    </div>
+                    <div class="summary-metric">
+                        <h3>LTV Growth</h3>
+                        <div class="metric-value">18.7%</div>
+                        <div class="metric-trend">+3.2%</div>
+                    </div>
+                </div>
+
+                <div class="ai-insights">
+                    <h3><i class="fas fa-robot"></i> AI-Generated Key Insights</h3>
+                    <div class="insights-grid">
+                        <div class="insight-card high-impact">
+                            <div class="insight-header">
+                                <h4>Revenue Acceleration Opportunity</h4>
+                                <span class="impact-badge high">High Impact</span>
+                            </div>
+                            <p>ML models predict 23% revenue increase if premium product pricing is optimized for Q4</p>
+                            <div class="confidence-bar">
+                                <span>Confidence: 89%</span>
+                                <div class="progress-bar"><div class="progress" style="width: 89%"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="insight-card critical-impact">
+                            <div class="insight-header">
+                                <h4>Customer Retention Risk</h4>
+                                <span class="impact-badge critical">Critical</span>
+                            </div>
+                            <p>Churn prediction identifies 342 high-value customers at risk in the next 30 days</p>
+                            <div class="confidence-bar">
+                                <span>Confidence: 94%</span>
+                                <div class="progress-bar"><div class="progress" style="width: 94%"></div></div>
+                            </div>
+                        </div>
+
+                        <div class="insight-card medium-impact">
+                            <div class="insight-header">
+                                <h4>Market Expansion Potential</h4>
+                                <span class="impact-badge medium">Medium Impact</span>
+                            </div>
+                            <p>Geographic analysis reveals untapped markets with 45% growth potential</p>
+                            <div class="confidence-bar">
+                                <span>Confidence: 76%</span>
+                                <div class="progress-bar"><div class="progress" style="width: 76%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insights-tabs">
+                <div class="tab-nav">
+                    <button class="tab-button active" data-tab="revenue">Revenue Intelligence</button>
+                    <button class="tab-button" data-tab="customer">Customer Analytics</button>
+                    <button class="tab-button" data-tab="market">Market Opportunities</button>
+                    <button class="tab-button" data-tab="recommendations">Strategic Recommendations</button>
+                </div>
+
+                <div id="revenue" class="tab-content active">
+                    <h3>Revenue Intelligence Dashboard</h3>
+                    <div class="revenue-content">
+                        <div class="revenue-forecast">
+                            <h4>Revenue Forecast & Trends</h4>
+                            <div id="revenue-forecast-chart" class="chart"></div>
+                        </div>
+                        <div class="revenue-drivers">
+                            <h4>Revenue Drivers</h4>
+                            <div id="revenue-drivers-chart" class="chart"></div>
+                        </div>
+                        <div class="optimization-opportunities">
+                            <h4>Revenue Optimization Opportunities</h4>
+                            <div class="optimization-grid">
+                                <div class="optimization-card">
+                                    <h5>Pricing Optimization</h5>
+                                    <div id="pricing-optimization" class="mini-chart"></div>
+                                    <p>Optimal price: $89</p>
+                                    <p>Potential increase: 12.4%</p>
+                                </div>
+                                <div class="optimization-card">
+                                    <h5>Customer Segmentation</h5>
+                                    <div id="customer-segments" class="mini-chart"></div>
+                                    <p>Focus on mid-value conversion</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="customer" class="tab-content">
+                    <h3>Customer Analytics & Behavior</h3>
+                    <div class="customer-content">
+                        <div class="customer-lifecycle">
+                            <h4>Customer Lifecycle Analysis</h4>
+                            <div id="customer-funnel" class="chart"></div>
+                        </div>
+                        <div class="clv-distribution">
+                            <h4>Customer Lifetime Value Distribution</h4>
+                            <div id="clv-distribution-chart" class="chart"></div>
+                        </div>
+                        <div class="segmentation-insights">
+                            <h4>Customer Segmentation Insights</h4>
+                            <div class="segment-cards">
+                                <div class="segment-card champions">
+                                    <h5>Champions</h5>
+                                    <p>234 customers</p>
+                                    <p>Avg CLV: $2,156</p>
+                                    <p>Strategy: VIP treatment</p>
+                                </div>
+                                <div class="segment-card loyalists">
+                                    <h5>Potential Loyalists</h5>
+                                    <p>567 customers</p>
+                                    <p>Avg CLV: $1,234</p>
+                                    <p>Strategy: Personalized offers</p>
+                                </div>
+                                <div class="segment-card at-risk">
+                                    <h5>At Risk</h5>
+                                    <p>189 customers</p>
+                                    <p>Avg CLV: $1,789</p>
+                                    <p>Strategy: Win-back campaigns</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
