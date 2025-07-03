@@ -281,7 +281,7 @@ cloud-bi-platform/
 ## 🚀 Quick Start
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/cloud-bi-platform.git
+   git clone https://github.com/Reaishma/cloud-bi-platform.git
    cd cloud-bi-platform
 
 2.  **Open locally**
@@ -296,7 +296,74 @@ npx http-server . -p 8080
 # Or simply open index.html in browser
 
 ```
-     
+
+## 🎯 Key Components
+
+**Dashboard Pages**
+**Main Dashboard**: Real-time metrics and KPIs
+**ML Workflows**: Pipeline management and execution
+**Model Performance**: Comprehensive model analytics
+**Business Insights**: Strategic recommendations
+
+## ✅Interactive Features
+
+Dynamic chart updates
+Real-time data simulation
+Responsive navigation
+Model performance monitoring
+Pipeline execution simulation
+
+## 📈 Sample Data
+
+**The platform includes realistic sample data for:**
+
+Sales transactions and forecasting
+Customer segmentation analysis
+Churn prediction metrics
+Revenue optimization insights
+ 
+## 🔧 Customization
+**Adding New Charts**
+
+```
+ function createCustomChart() {
+    const trace = {
+        x: ['A', 'B', 'C'],
+        y: [1, 2, 3],
+        type: 'bar'
+    };
+    
+    Plotly.newPlot('chart-id', [trace]);
+}
+```
+** Modifying Styles **
+```
+ .custom-component {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+```
+ ##  🌐 Browser Support
+Chrome (recommended)
+Firefox
+Safari
+Edge
+Mobile browsers
+
+## 📊 Performance
+Lightweight: < 500KB total size
+Fast loading: < 2 seconds initial load
+Smooth animations: 60fps interactions
+Responsive: Works on all screen sizes
+
+## 🤝 Contributing
+
+```Fork the repository
+Create feature branch (git checkout -b feature/amazing-feature)
+Commit changes (git commit -m 'Add amazing feature')
+Push to branch (git push origin feature/amazing-feature)
+Open Pull Request```
 
 ## 📄 License
 
