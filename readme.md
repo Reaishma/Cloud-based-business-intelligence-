@@ -271,6 +271,13 @@ cloud-bi-platform/
 ## 🚀 Live Demo
 [View Live Demo](https://reaishma.github.io/Cloud-based-business-intelligence-/)
 
+## 📊 Features
+- **Real-time Business Dashboards** - Executive KPIs and operational metrics
+- **ML Workflows** - Simulated Amazon SageMaker pipelines  
+- **Model Performance** - Comprehensive ML model evaluation
+- **Business Insights** - AI-powered strategic recommendations
+- **Cloud Integration** - AWS, GCP, Tableau, Power BI configurations
+
 
 ## 📄 License
 
