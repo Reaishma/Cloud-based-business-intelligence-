@@ -307,20 +307,20 @@ npx http-server . -p 8080
 
 ## ✅Interactive Features
 
-Dynamic chart updates
-Real-time data simulation
-Responsive navigation
-Model performance monitoring
-Pipeline execution simulation
+- Dynamic chart updates
+- Real-time data simulation
+- Responsive navigation
+- Model performance monitoring
+- Pipeline execution simulation
 
 ## 📈 Sample Data
 
 **The platform includes realistic sample data for:**
 
-Sales transactions and forecasting
-Customer segmentation analysis
-Churn prediction metrics
-Revenue optimization insights
+- Sales transactions and forecasting
+- Customer segmentation analysis
+- Churn prediction metrics
+- Revenue optimization insights
  
 ## 🔧 Customization
 **Adding New Charts**
@@ -345,11 +345,11 @@ Revenue optimization insights
 }
 ```
  ##  🌐 Browser Support
-Chrome (recommended)
-Firefox
-Safari
-Edge
-Mobile browsers
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
+- Mobile browsers
 
 ## 📊 Performance
 
