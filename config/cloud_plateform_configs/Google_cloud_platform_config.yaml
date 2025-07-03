@@ -1,1 +1,110 @@
+# Google Cloud Platform Configuration for Cloud BI Platform
+# Simulated GCP AI Platform and related services configuration
 
+gcp:
+  project_id: "bi-platform-project"
+  region: "us-central1"
+  zone: "us-central1-a"
+
+# AI Platform Configuration
+ai_platform:
+  # Training Configuration
+  training:
+    runtime_version: "2.8"
+    python_version: "3.7"
+    scale_tier: "STANDARD_1"
+    machine_type: "n1-standard-4"
+    
+  # Prediction Configuration
+  prediction:
+    machine_type: "n1-standard-2"
+    min_nodes: 1
+    max_nodes: 10
+    framework: "TENSORFLOW"
+    python_version: "3.7"
+    
+  # Vertex AI Configuration
+  vertex_ai:
+    endpoint_display_name: "bi-platform-endpoint"
+    model_display_name: "bi-platform-model"
+    training_pipeline_display_name: "bi-platform-training"
+
+# BigQuery Configuration
+bigquery:
+  dataset_id: "bi_platform_dataset"
+  location: "US"
+  
+  # Data Warehouse Tables
+  tables:
+    sales_data: "bi_platform_dataset.sales_data"
+    customer_data: "bi_platform_dataset.customer_data"
+    product_data: "bi_platform_dataset.product_data"
+    transaction_data: "bi_platform_dataset.transaction_data"
+    
+  # Data Lake
+  data_lake:
+    raw_data_table: "bi_platform_dataset.raw_data"
+    processed_data_table: "bi_platform_dataset.processed_data"
+    feature_table: "bi_platform_dataset.feature_store"
+
+# Cloud Storage Configuration
+cloud_storage:
+  data_bucket: "gs://bi-platform-data-storage"
+  model_bucket: "gs://bi-platform-ml-models"
+  artifacts_bucket: "gs://bi-platform-artifacts"
+  
+  # Bucket Structure
+  structure:
+    raw_data: "gs://bi-platform-data-storage/raw/"
+    processed_data: "gs://bi-platform-data-storage/processed/"
+    features: "gs://bi-platform-data-storage/features/"
+    models: "gs://bi-platform-ml-models/trained-models/"
+
+# Cloud Functions Configuration
+cloud_functions:
+  data_ingestion: "bi-platform-data-ingestion"
+  preprocessing: "bi-platform-preprocessing"
+  model_training_trigger: "bi-platform-training-trigger"
+  batch_prediction: "bi-platform-batch-prediction"
+
+# Dataflow Configuration
+dataflow:
+  template_location: "gs://bi-platform-artifacts/templates/"
+  temp_location: "gs://bi-platform-data-storage/temp/"
+  staging_location: "gs://bi-platform-data-storage/staging/"
+  
+  jobs:
+    etl_pipeline: "bi-platform-etl-pipeline"
+    feature_engineering: "bi-platform-feature-engineering"
+    data_validation: "bi-platform-data-validation"
+
+# Pub/Sub Configuration
+pubsub:
+  topics:
+    data_ingestion: "bi-platform-data-ingestion"
+    model_training_trigger: "bi-platform-model-training"
+    prediction_requests: "bi-platform-predictions"
+    
+  subscriptions:
+    data_processor: "bi-platform-data-processor-sub"
+    model_trainer: "bi-platform-model-trainer-sub"
+    predictor: "bi-platform-predictor-sub"
+
+# Cloud Monitoring
+monitoring:
+  notification_channels:
+    email: "admin@bi-platform.com"
+    slack: "bi-platform-alerts"
+    
+  dashboards:
+    ml_pipeline: "bi-platform-ml-dashboard"
+    data_quality: "bi-platform-data-quality-dashboard"
+    system_health: "bi-platform-system-health-dashboard"
+
+# Identity and Access Management
+iam:
+  service_accounts:
+    ai_platform: "bi-platform-ai@bi-platform-project.iam.gserviceaccount.com"
+    dataflow: "bi-platform-dataflow@bi-platform-project.iam.gserviceaccount.com"
+    functions: "bi-platform-functions@bi-platform-project.iam.gserviceaccount.com"
+    
