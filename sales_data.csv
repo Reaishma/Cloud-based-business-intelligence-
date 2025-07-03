@@ -1,0 +1,31 @@
+transaction_id,customer_id,product_id,product_category,product_name,quantity,unit_price,total_amount,transaction_date,region,sales_rep_id,channel
+TXN001,CUST001,PROD001,Electronics,Smartphone Pro Max,1,899.99,899.99,2024-01-15,North America,REP001,Online
+TXN002,CUST002,PROD002,Clothing,Premium Jacket,2,149.99,299.98,2024-01-15,Europe,REP002,Retail
+TXN003,CUST003,PROD003,Home & Garden,Smart Home Hub,1,199.99,199.99,2024-01-16,Asia Pacific,REP003,Online
+TXN004,CUST004,PROD004,Sports,Professional Tennis Racket,1,299.99,299.99,2024-01-16,North America,REP001,Retail
+TXN005,CUST005,PROD005,Books,Data Science Handbook,3,49.99,149.97,2024-01-17,Europe,REP004,Online
+TXN006,CUST001,PROD006,Electronics,Wireless Headphones,1,199.99,199.99,2024-01-17,North America,REP001,Online
+TXN007,CUST006,PROD007,Clothing,Designer Sneakers,2,179.99,359.98,2024-01-18,Asia Pacific,REP005,Retail
+TXN008,CUST007,PROD008,Home & Garden,Robot Vacuum,1,399.99,399.99,2024-01-18,Europe,REP002,Online
+TXN009,CUST008,PROD009,Sports,Fitness Tracker,1,149.99,149.99,2024-01-19,North America,REP006,Online
+TXN010,CUST009,PROD010,Books,AI Programming Guide,2,59.99,119.98,2024-01-19,Asia Pacific,REP003,Retail
+TXN011,CUST010,PROD001,Electronics,Smartphone Pro Max,1,899.99,899.99,2024-01-20,Europe,REP007,Online
+TXN012,CUST002,PROD011,Clothing,Casual T-Shirt,5,29.99,149.95,2024-01-20,Europe,REP002,Online
+TXN013,CUST011,PROD012,Home & Garden,LED Smart Bulbs,4,24.99,99.96,2024-01-21,North America,REP001,Retail
+TXN014,CUST012,PROD013,Sports,Yoga Mat Premium,1,79.99,79.99,2024-01-21,Asia Pacific,REP008,Online
+TXN015,CUST013,PROD014,Books,Machine Learning Theory,1,89.99,89.99,2024-01-22,Europe,REP004,Online
+TXN016,CUST003,PROD015,Electronics,Tablet Ultra,1,599.99,599.99,2024-01-22,Asia Pacific,REP003,Retail
+TXN017,CUST014,PROD016,Clothing,Winter Coat,1,249.99,249.99,2024-01-23,North America,REP009,Online
+TXN018,CUST015,PROD017,Home & Garden,Coffee Machine Deluxe,1,349.99,349.99,2024-01-23,Europe,REP002,Retail
+TXN019,CUST016,PROD018,Sports,Mountain Bike,1,1299.99,1299.99,2024-01-24,Asia Pacific,REP010,Online
+TXN020,CUST017,PROD019,Books,Cloud Computing Guide,2,69.99,139.98,2024-01-24,North America,REP001,Online
+TXN021,CUST018,PROD020,Electronics,Gaming Laptop,1,1599.99,1599.99,2024-01-25,Europe,REP011,Retail
+TXN022,CUST019,PROD002,Clothing,Premium Jacket,1,149.99,149.99,2024-01-25,Asia Pacific,REP005,Online
+TXN023,CUST020,PROD021,Home & Garden,Smart Thermostat,2,199.99,399.98,2024-01-26,North America,REP012,Online
+TXN024,CUST004,PROD022,Sports,Running Shoes Pro,1,149.99,149.99,2024-01-26,North America,REP001,Retail
+TXN025,CUST021,PROD023,Books,Business Analytics,1,79.99,79.99,2024-01-27,Europe,REP004,Online
+TXN026,CUST022,PROD024,Electronics,Smart Watch Series X,1,449.99,449.99,2024-01-27,Asia Pacific,REP013,Online
+TXN027,CUST023,PROD025,Clothing,Professional Suit,1,399.99,399.99,2024-01-28,North America,REP014,Retail
+TXN028,CUST024,PROD026,Home & Garden,Garden Tool Set,1,129.99,129.99,2024-01-28,Europe,REP002,Online
+TXN029,CUST025,PROD027,Sports,Basketball Premium,2,89.99,179.98,2024-01-29,Asia Pacific,REP015,Retail
+TXN030,CUST026,PROD028,Books,Digital Marketing,3,54.99,164.97,2024-01-29,North America,REP001,Online
