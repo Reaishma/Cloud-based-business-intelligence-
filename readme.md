@@ -352,19 +352,22 @@ Edge
 Mobile browsers
 
 ## 📊 Performance
-Lightweight: < 500KB total size
-Fast loading: < 2 seconds initial load
-Smooth animations: 60fps interactions
-Responsive: Works on all screen sizes
+
+- Lightweight: < 500KB total size
+- Fast loading: < 2 seconds initial load
+- Smooth animations: 60fps interactions
+- Responsive: Works on all screen sizes
 
 ## 🤝 Contributing
 
-```Fork the repository
-Create feature branch (git checkout -b feature/amazing-feature)
-Commit changes (git commit -m 'Add amazing feature')
-Push to branch (git push origin feature/amazing-feature)
-Open Pull Request```
+```
+- Fork the repository
+- Create feature branch (git checkout -b     feature/amazing-feature)
+- Commit changes (git commit -m 'Add amazing feature')
+- Push to branch (git push origin feature/amazing-feature)
+- Open Pull Request
 
+```
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
