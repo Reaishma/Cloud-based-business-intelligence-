@@ -1,0 +1,215 @@
+{
+  "tableau_server": {
+    "server_url": "https://bi-platform.tableauserver.com",
+    "version": "2023.1",
+    "site_id": "bi-platform-site",
+    "authentication": {
+      "method": "active_directory",
+      "token_expiry": 3600
+    }
+  },
+  
+  "data_connections": {
+    "primary_database": {
+      "connection_type": "postgresql",
+      "server": "bi-platform-db.cluster-xyz.us-east-1.rds.amazonaws.com",
+      "port": 5432,
+      "database": "bi_platform",
+      "schema": "analytics",
+      "ssl_mode": "require",
+      "refresh_schedule": "daily"
+    },
+    
+    "data_warehouse": {
+      "connection_type": "redshift",
+      "server": "bi-platform-warehouse.abc123.us-east-1.redshift.amazonaws.com", 
+      "port": 5439,
+      "database": "warehouse",
+      "schema": "dwh",
+      "ssl_mode": "require",
+      "refresh_schedule": "hourly"
+    },
+    
+    "bigquery_connection": {
+      "connection_type": "bigquery",
+      "project_id": "bi-platform-project",
+      "dataset": "bi_platform_dataset",
+      "authentication": "service_account",
+      "refresh_schedule": "realtime"
+    }
+  },
+  
+  "workbooks": {
+    "executive_dashboard": {
+      "name": "Executive KPI Dashboard",
+      "path": "/workbooks/executive_dashboard.twbx",
+      "data_sources": ["primary_database", "data_warehouse"],
+      "refresh_schedule": "hourly",
+      "extract_refresh": true,
+      "permissions": {
+        "view": ["executives", "managers", "analysts"],
+        "edit": ["analysts", "admins"]
+      }
+    },
+    
+    "sales_analytics": {
+      "name": "Sales Performance Analytics",
+      "path": "/workbooks/sales_analytics.twbx", 
+      "data_sources": ["data_warehouse", "bigquery_connection"],
+      "refresh_schedule": "every_15_minutes",
+      "extract_refresh": true,
+      "permissions": {
+        "view": ["sales_team", "managers", "analysts"],
+        "edit": ["analysts", "admins"]
+      }
+    },
+    
+    "customer_insights": {
+      "name": "Customer Behavior Insights",
+      "path": "/workbooks/customer_insights.twbx",
+      "data_sources": ["primary_database", "bigquery_connection"],
+      "refresh_schedule": "daily",
+      "extract_refresh": true,
+      "permissions": {
+        "view": ["marketing_team", "analysts", "managers"],
+        "edit": ["analysts", "admins"]
+      }
+    },
+    
+    "ml_model_monitoring": {
+      "name": "ML Model Performance Monitoring",
+      "path": "/workbooks/ml_monitoring.twbx",
+      "data_sources": ["data_warehouse"],
+      "refresh_schedule": "every_5_minutes",
+      "extract_refresh": false,
+      "permissions": {
+        "view": ["data_scientists", "analysts", "managers"],
+        "edit": ["data_scientists", "admins"]
+      }
+    }
+  },
+  
+  "data_sources": {
+    "sales_data_extract": {
+      "name": "Sales Data Extract",
+      "connection": "data_warehouse",
+      "extract_type": "full",
+      "refresh_schedule": "daily_at_2am",
+      "incremental_refresh": {
+        "enabled": true,
+        "date_field": "transaction_date"
+      }
+    },
+    
+    "customer_data_extract": {
+      "name": "Customer Data Extract", 
+      "connection": "primary_database",
+      "extract_type": "incremental",
+      "refresh_schedule": "hourly",
+      "incremental_refresh": {
+        "enabled": true,
+        "date_field": "last_updated"
+      }
+    },
+    
+    "ml_predictions_live": {
+      "name": "ML Predictions Live Feed",
+      "connection": "bigquery_connection",
+      "extract_type": "live",
+      "refresh_schedule": "realtime",
+      "incremental_refresh": {
+        "enabled": false
+      }
+    }
+  },
+  
+  "security": {
+    "row_level_security": {
+      "enabled": true,
+      "rules": [
+        {
+          "field": "region",
+          "user_attribute": "user_region",
+          "filter_type": "equals"
+        },
+        {
+          "field": "department",
+          "user_attribute": "user_department", 
+          "filter_type": "contains"
+        }
+      ]
+    },
+    
+    "data_encryption": {
+      "at_rest": true,
+      "in_transit": true,
+      "extract_encryption": true
+    }
+  },
+  
+  "performance": {
+    "extract_optimization": {
+      "parallel_processing": true,
+      "background_refresh": true,
+      "materialized_views": true
+    },
+    
+    "query_optimization": {
+      "query_caching": true,
+      "context_filters": true,
+      "data_engine": "hyper"
+    }
+  },
+  
+  "publishing": {
+    "auto_publish": {
+      "enabled": true,
+      "schedule": "after_refresh",
+      "notification": {
+        "email": ["admin@bi-platform.com"],
+        "slack": "#tableau-updates"
+      }
+    },
+    
+    "subscription_settings": {
+      "executive_dashboard": {
+        "recipients": ["executives@bi-platform.com"],
+        "schedule": "daily_at_8am",
+        "format": "pdf"
+      },
+      
+      "sales_analytics": {
+        "recipients": ["sales-team@bi-platform.com"],
+        "schedule": "weekly_monday_9am", 
+        "format": "png"
+      }
+    }
+  },
+  
+  "monitoring": {
+    "usage_analytics": {
+      "enabled": true,
+      "retention_days": 365,
+      "alerts": {
+        "low_usage": {
+          "threshold": "< 5 views in 30 days",
+          "action": "email_owner"
+        },
+        "performance_issues": {
+          "threshold": "> 30 seconds load time",
+          "action": "email_admin"
+        }
+      }
+    },
+    
+    "data_freshness": {
+      "monitoring": true,
+      "alerts": {
+        "stale_data": {
+          "threshold": "24 hours",
+          "notification": ["data-team@bi-platform.com"]
+        }
+      }
+    }
+  }
+}
