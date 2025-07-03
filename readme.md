@@ -278,6 +278,25 @@ cloud-bi-platform/
 - **Business Insights** - AI-powered strategic recommendations
 - **Cloud Integration** - AWS, GCP, Tableau, Power BI configurations
 
+## 🚀 Quick Start
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/cloud-bi-platform.git
+   cd cloud-bi-platform
+
+2.  **Open locally**
+      
+   ```
+    # Using Python
+python -m http.server 8080
+
+# Using Node.js
+npx http-server . -p 8080
+
+# Or simply open index.html in browser
+
+```
+     
 
 ## 📄 License
 
