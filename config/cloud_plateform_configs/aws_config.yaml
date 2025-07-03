@@ -1,0 +1,68 @@
+# AWS Configuration for Cloud BI Platform
+# Simulated AWS SageMaker and related services configuration
+
+aws:
+  region: us-east-1
+  account_id: "123456789012"
+  
+sagemaker:
+  # SageMaker Training Configuration
+  training:
+    instance_type: ml.m5.large
+    instance_count: 1
+    max_run_time: 3600
+    volume_size: 30
+    
+  # SageMaker Inference Configuration
+  inference:
+    instance_type: ml.t2.medium
+    initial_instance_count: 1
+    max_capacity: 10
+    target_tracking_scaling:
+      target_value: 70.0
+      metric: CPUUtilization
+      
+  # Model Registry
+  model_registry:
+    model_package_group_name: "bi-platform-models"
+    approval_status: "Approved"
+    
+  # Processing Jobs
+  processing:
+    instance_type: ml.m5.large
+    instance_count: 1
+    volume_size: 20
+
+# S3 Configuration
+s3:
+  data_bucket: "bi-platform-data-bucket"
+  model_bucket: "bi-platform-model-artifacts"
+  logs_bucket: "bi-platform-logs"
+  
+  # Data Lake Structure
+  data_lake:
+    raw_data: "s3://bi-platform-data-bucket/raw/"
+    processed_data: "s3://bi-platform-data-bucket/processed/"
+    feature_store: "s3://bi-platform-data-bucket/features/"
+    
+# IAM Roles
+iam:
+  sagemaker_execution_role: "arn:aws:iam::123456789012:role/SageMakerExecutionRole"
+  lambda_execution_role: "arn:aws:iam::123456789012:role/LambdaExecutionRole"
+  
+# CloudWatch Configuration
+cloudwatch:
+  log_group: "/aws/sagemaker/bi-platform"
+  retention_days: 30
+  
+# Lambda Functions
+lambda:
+  data_preprocessing: "bi-platform-data-preprocessing"
+  model_deployment: "bi-platform-model-deployment"
+  batch_inference: "bi-platform-batch-inference"
+  
+# Step Functions
+step_functions:
+  ml_pipeline: "bi-platform-ml-pipeline"
+  training_workflow: "bi-platform-training-workflow"
+  
