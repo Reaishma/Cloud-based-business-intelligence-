@@ -1,0 +1,317 @@
+{
+  "power_bi": {
+    "tenant_id": "12345678-1234-1234-1234-123456789abc",
+    "workspace": {
+      "name": "BI Platform Analytics",
+      "id": "87654321-4321-4321-4321-abcdef123456",
+      "capacity": "Premium",
+      "region": "East US"
+    },
+    "service_principal": {
+      "client_id": "abcdef12-3456-7890-abcd-ef1234567890",
+      "tenant_id": "12345678-1234-1234-1234-123456789abc"
+    }
+  },
+  
+  "data_gateways": {
+    "on_premises_gateway": {
+      "name": "BI-Platform-Gateway",
+      "location": "East US",
+      "version": "3000.150.17",
+      "status": "online",
+      "data_sources": [
+        {
+          "name": "Primary Database",
+          "type": "PostgreSQL",
+          "server": "bi-platform-db.cluster-xyz.us-east-1.rds.amazonaws.com",
+          "database": "bi_platform",
+          "port": 5432,
+          "authentication": "basic"
+        },
+        {
+          "name": "Data Warehouse",
+          "type": "Amazon Redshift",
+          "server": "bi-platform-warehouse.abc123.us-east-1.redshift.amazonaws.com",
+          "database": "warehouse", 
+          "port": 5439,
+          "authentication": "basic"
+        }
+      ]
+    },
+    
+    "cloud_connections": {
+      "azure_sql": {
+        "server": "bi-platform-azure.database.windows.net",
+        "database": "bi_analytics",
+        "authentication": "service_principal"
+      },
+      "bigquery": {
+        "project_id": "bi-platform-project",
+        "dataset": "bi_platform_dataset",
+        "authentication": "service_account"
+      },
+      "snowflake": {
+        "account": "bi-platform.snowflakecomputing.com",
+        "warehouse": "BI_WAREHOUSE",
+        "database": "BI_DATABASE",
+        "schema": "ANALYTICS"
+      }
+    }
+  },
+  
+  "datasets": {
+    "sales_analytics_dataset": {
+      "name": "Sales Analytics Dataset",
+      "id": "sales-001",
+      "mode": "Import",
+      "refresh_schedule": {
+        "frequency": "daily",
+        "time": "02:00",
+        "timezone": "UTC",
+        "notify_option": "MailOnFailure"
+      },
+      "data_sources": ["Primary Database", "Data Warehouse"],
+      "estimated_size": "2.5 GB",
+      "tables": [
+        "sales_transactions",
+        "customers", 
+        "products",
+        "sales_forecasts"
+      ]
+    },
+    
+    "customer_insights_dataset": {
+      "name": "Customer Insights Dataset",
+      "id": "customer-001",
+      "mode": "DirectQuery",
+      "refresh_schedule": {
+        "frequency": "hourly",
+        "timezone": "UTC"
+      },
+      "data_sources": ["BigQuery", "Primary Database"],
+      "estimated_size": "5.1 GB",
+      "tables": [
+        "customer_profiles",
+        "customer_segments",
+        "churn_predictions",
+        "lifetime_value"
+      ]
+    },
+    
+    "ml_monitoring_dataset": {
+      "name": "ML Model Monitoring Dataset", 
+      "id": "ml-monitor-001",
+      "mode": "Streaming",
+      "data_sources": ["Azure SQL", "BigQuery"],
+      "real_time": true,
+      "tables": [
+        "model_performance",
+        "prediction_logs",
+        "data_drift_metrics",
+        "training_history"
+      ]
+    }
+  },
+  
+  "reports": {
+    "executive_dashboard": {
+      "name": "Executive KPI Dashboard",
+      "id": "exec-dashboard-001",
+      "dataset": "sales_analytics_dataset",
+      "pages": [
+        "Revenue Overview",
+        "Customer Metrics", 
+        "Growth Trends",
+        "Predictive Insights"
+      ],
+      "refresh_frequency": "hourly",
+      "subscriptions": [
+        {
+          "recipients": ["executives@bi-platform.com"],
+          "schedule": "daily_8am",
+          "format": "pdf"
+        }
+      ]
+    },
+    
+    "sales_performance_report": {
+      "name": "Sales Performance Analytics",
+      "id": "sales-report-001", 
+      "dataset": "sales_analytics_dataset",
+      "pages": [
+        "Sales Trends",
+        "Product Performance",
+        "Regional Analysis",
+        "Sales Forecasting"
+      ],
+      "refresh_frequency": "every_15_minutes",
+      "subscriptions": [
+        {
+          "recipients": ["sales-team@bi-platform.com"],
+          "schedule": "weekly_monday_9am",
+          "format": "powerpoint"
+        }
+      ]
+    },
+    
+    "customer_analytics_report": {
+      "name": "Customer Behavior Analytics",
+      "id": "customer-report-001",
+      "dataset": "customer_insights_dataset", 
+      "pages": [
+        "Customer Segmentation",
+        "Churn Analysis",
+        "Lifetime Value",
+        "Acquisition Trends"
+      ],
+      "refresh_frequency": "daily",
+      "subscriptions": [
+        {
+          "recipients": ["marketing-team@bi-platform.com"],
+          "schedule": "weekly_wednesday_10am",
+          "format": "excel"
+        }
+      ]
+    },
+    
+    "ml_model_dashboard": {
+      "name": "ML Model Performance Dashboard",
+      "id": "ml-dashboard-001",
+      "dataset": "ml_monitoring_dataset",
+      "pages": [
+        "Model Performance Overview",
+        "Prediction Accuracy",
+        "Data Drift Monitoring", 
+        "Training Pipeline Status"
+      ],
+      "refresh_frequency": "real_time",
+      "subscriptions": [
+        {
+          "recipients": ["data-science-team@bi-platform.com"],
+          "schedule": "daily_6am",
+          "format": "pdf"
+        }
+      ]
+    }
+  },
+
+  "real_time",
+      "subscriptions": [
+        {
+          "recipients": ["data-science-team@bi-platform.com"],
+          "schedule": "daily_6am",
+          "format": "pdf"
+        }
+      ]
+    }
+  },
+  
+  "security": {
+    "row_level_security": {
+      "enabled": true,
+      "rules": [
+        {
+          "table": "sales_transactions",
+          "filter": "[Region] = USERNAME()",
+          "user_mapping": "region_mapping_table"
+        },
+        {
+          "table": "customer_profiles", 
+          "filter": "[Department] IN VALUES(UserDepartments())",
+          "user_mapping": "department_mapping_table"
+        }
+      ]
+    },
+    
+    "sensitivity_labels": {
+      "enabled": true,
+      "labels": [
+        {
+          "name": "Confidential",
+          "tables": ["customer_profiles", "sales_transactions"],
+          "protection": "encrypt"
+        },
+        {
+          "name": "Highly Confidential",
+          "tables": ["churn_predictions", "lifetime_value"],
+          "protection": "encrypt_and_audit"
+        }
+      ]
+    }
+  },
+  
+  "capacity_management": {
+    "premium_capacity": {
+      "name": "BI-Platform-P1",
+      "sku": "P1",
+      "workloads": {
+        "dataflows": {
+          "enabled": true,
+          "memory_percentage": 20
+        },
+        "paginated_reports": {
+          "enabled": true,
+          "memory_percentage": 10
+        },
+        "ai_workloads": {
+          "enabled": true,
+          "memory_percentage": 30
+        }
+      }
+    },
+    
+    "autoscale": {
+      "enabled": true,
+      "max_capacity": "P2",
+      "notification_emails": ["admin@bi-platform.com"]
+    }
+  },
+  
+  "monitoring": {
+    "usage_metrics": {
+      "enabled": true,
+      "retention_days": 90,
+      "metrics": [
+        "report_views",
+        "dataset_refreshes",
+        "query_performance",
+        "user_activity"
+      ]
+    },
+    
+    "alerts": {
+      "refresh_failures": {
+        "enabled": true,
+        "notification": ["data-team@bi-platform.com"]
+      },
+      "performance_degradation": {
+        "enabled": true,
+        "threshold": "query_time > 30 seconds",
+        "notification": ["admin@bi-platform.com"]
+      },
+      "capacity_utilization": {
+        "enabled": true,
+        "threshold": "> 80%",
+        "notification": ["admin@bi-platform.com"]
+      }
+    }
+  },
+  
+  "api_settings": {
+    "rest_api": {
+      "base_url": "https://api.powerbi.com/v1.0/myorg/",
+      "authentication": "service_principal",
+      "rate_limits": {
+        "requests_per_hour": 1000,
+        "concurrent_requests": 10
+      }
+    },
+    
+    "embedded_analytics": {
+      "app_id": "embedded-bi-app",
+      "embedding_context": "for_organization",
+      "token_expiry": 60,
+      "permissions": ["read", "write", "create"]
+    }
+  }
+}
