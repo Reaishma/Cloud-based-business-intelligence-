@@ -23,7 +23,7 @@ A comprehensive cloud-based business intelligence platform featuring machine lea
 
 ## 🏗️ Architecture
 
-'''
+```
 
 │   ├── Main Dashboard
 │   ├── ML Workflows
@@ -267,13 +267,18 @@ cloud-bi-platform/
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open Pull Request
 
+
+## 🚀 Live Demo
+[View Live Demo](https://reaishma.github.io/Cloud-based-business-intelligence-/)
+
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-##🧑‍💻 Author 
+##  🧑‍💻 Author 
 
-Reaishma N 
+ Reaishma N 
 
 
 ## 🆘 Support
