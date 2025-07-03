@@ -1,0 +1,27 @@
+customer_id,first_name,last_name,email,phone,registration_date,birth_date,gender,address,city,state,country,postal_code,customer_segment,lifetime_value,total_orders,last_order_date,acquisition_channel,preferred_contact
+CUST001,John,Smith,john.smith@email.com,+1-555-0101,2023-03-15,1985-07-22,Male,123 Main St,New York,NY,USA,10001,High Value,2450.75,8,2024-01-17,Social Media,Email
+CUST002,Sarah,Johnson,sarah.johnson@email.com,+44-20-7946-0958,2023-05-20,1990-12-03,Female,45 Oxford St,London,,UK,SW1A 1AA,Medium Value,1250.30,5,2024-01-20,Google Ads,Email
+CUST003,Hiroshi,Tanaka,hiroshi.tanaka@email.com,+81-3-1234-5678,2023-02-10,1988-04-15,Male,2-3-1 Shibuya,Tokyo,,Japan,150-0002,High Value,1890.45,6,2024-01-22,Referral,Phone
+CUST004,Emily,Davis,emily.davis@email.com,+1-555-0202,2023-08-12,1992-09-28,Female,789 Oak Ave,Chicago,IL,USA,60601,Medium Value,965.80,4,2024-01-26,Organic Search,Email
+CUST005,Pierre,Dubois,pierre.dubois@email.com,+33-1-42-86-83-26,2023-06-30,1987-01-12,Male,15 Rue de la Paix,Paris,,France,75001,Low Value,425.60,3,2024-01-17,Facebook Ads,Email
+CUST006,Li,Wang,li.wang@email.com,+86-10-6505-1234,2023-04-08,1991-11-20,Female,100 Wangfujing St,Beijing,,China,100006,Medium Value,1560.25,7,2024-01-18,LinkedIn,SMS
+CUST007,Anna,Mueller,anna.mueller@email.com,+49-30-12345678,2023-09-15,1989-06-05,Female,Unter den Linden 1,Berlin,,Germany,10117,High Value,2180.90,9,2024-01-18,Email Campaign,Email
+CUST008,Michael,Brown,michael.brown@email.com,+1-555-0303,2023-01-25,1986-03-18,Male,456 Pine St,Los Angeles,CA,USA,90210,Medium Value,1340.55,6,2024-01-19,Organic Search,Phone
+CUST009,Yuki,Sato,yuki.sato@email.com,+81-6-6543-2109,2023-07-18,1993-08-30,Female,1-1-1 Umeda,Osaka,,Japan,530-0001,Low Value,680.40,4,2024-01-19,Referral,Email
+CUST010,Emma,Wilson,emma.wilson@email.com,+44-161-123-4567,2023-10-05,1994-02-14,Female,25 King St,Manchester,,UK,M2 6AZ,High Value,2890.75,11,2024-01-20,Google Ads,Email
+CUST011,Carlos,Rodriguez,carlos.rodriguez@email.com,+1-555-0404,2023-11-20,1983-10-07,Male,321 Elm St,Miami,FL,USA,33101,Medium Value,1120.30,5,2024-01-21,Social Media,SMS
+CUST012,Priya,Sharma,priya.sharma@email.com,+91-11-2345-6789,2023-12-03,1990-05-25,Female,12 CP,New Delhi,,India,110001,Low Value,540.85,3,2024-01-21,Instagram,Email
+CUST013,Marco,Rossi,marco.rossi@email.com,+39-06-1234-5678,2023-03-28,1985-12-10,Male,Via del Corso 1,Rome,,Italy,00187,Medium Value,1450.20,6,2024-01-22,Email Campaign,Phone
+CUST014,Jennifer,Taylor,jennifer.taylor@email.com,+1-555-0505,2023-05-14,1988-09-02,Female,654 Maple Ave,Toronto,ON,Canada,M5V 3A8,High Value,2650.40,10,2024-01-23,Referral,Email
+CUST015,Hans,Schmidt,hans.schmidt@email.com,+49-89-12345678,2023-08-07,1987-04-17,Male,Marienplatz 1,Munich,,Germany,80331,Medium Value,1880.65,8,2024-01-23,LinkedIn,Email
+CUST016,Kenji,Yamamoto,kenji.yamamoto@email.com,+81-3-9876-5432,2023-02-22,1992-07-08,Male,3-4-2 Ginza,Tokyo,,Japan,104-0061,High Value,3120.55,12,2024-01-24,Organic Search,Phone
+CUST017,Amanda,Clark,amanda.clark@email.com,+1-555-0606,2023-06-16,1991-01-19,Female,987 Cedar St,Seattle,WA,USA,98101,Medium Value,1670.35,7,2024-01-24,Google Ads,Email
+CUST018,Viktor,Petrov,viktor.petrov@email.com,+7-495-123-4567,2023-09-30,1986-11-25,Male,Red Square 1,Moscow,,Russia,101000,High Value,2340.80,9,2024-01-25,Email Campaign,SMS
+CUST019,Mei,Chen,mei.chen@email.com,+86-21-1234-5678,2023-04-12,1989-08-14,Female,200 Nanjing Rd,Shanghai,,China,200001,Low Value,780.25,4,2024-01-25,WeChat,SMS
+CUST020,Robert,Anderson,robert.anderson@email.com,+1-555-0707,2023-07-25,1984-05-30,Male,159 Broadway,Boston,MA,USA,02101,Medium Value,1390.70,6,2024-01-26,Referral,Phone
+CUST021,Sophie,Martin,sophie.martin@email.com,+33-4-91-12-34-56,2023-10-18,1993-03-06,Female,La Canebière 1,Marseille,,France,13001,Low Value,620.15,3,2024-01-27,Facebook Ads,Email
+CUST022,David,Kim,david.kim@email.com,+82-2-1234-5678,2023-11-08,1990-12-22,Male,Gangnam-gu 1,Seoul,,South Korea,135-090,High Value,2780.90,11,2024-01-27,Instagram,Email
+CUST023,Isabella,Garcia,isabella.garcia@email.com,+1-555-0808,2023-01-12,1987-06-18,Female,753 Willow St,Phoenix,AZ,USA,85001,Medium Value,1540.45,7,2024-01-28,Organic Search,SMS
+CUST024,Lars,Andersen,lars.andersen@email.com,+45-33-12-34-56,2023-05-09,1988-10-04,Male,Strøget 1,Copenhagen,,Denmark,1000,Low Value,490.60,3,2024-01-28,LinkedIn,Phone
+CUST025,Aisha,Patel,aisha.patel@email.com,+91-22-1234-5678,2023-08-21,1991-02-28,Female,Marine Drive 1,Mumbai,,India,400001,Medium Value,1680.25,8,2024-01-29,Email Campaign,Email
+CUST026,Thomas,White,thomas.white@email.com,+1-555-0909,2023-12-15,1985-09-11,Male,852 Birch Ave,Denver,CO,USA,80201,High Value,2460.35,9,2024-01-29,Social Media,Email
