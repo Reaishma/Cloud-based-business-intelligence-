@@ -2,6 +2,10 @@
 
 A comprehensive cloud-based business intelligence platform featuring machine learning analytics, predictive insights, and enterprise-grade data visualization capabilities. This project simulates Amazon SageMaker workflows and integrates with major cloud BI platforms including Tableau, Power BI, and Google Cloud BI.
 
+
+# 🚀 Live Demo
+View Live Demo https://reaishma.github.io/Cloud-based-business-intelligence-/
+
 ## 🌟 Features
 
 ### Core Analytics
@@ -267,9 +271,6 @@ cloud-bi-platform/
 4. Push to branch (`git push origin feature/amazing-feature`)
 5. Open Pull Request
 
-
-## 🚀 Live Demo
-[View Live Demo](https://reaishma.github.io/Cloud-based-business-intelligence-/)
 
 ## 📊 Features
 - **Real-time Business Dashboards** - Executive KPIs and operational metrics
