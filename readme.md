@@ -101,6 +101,10 @@ View Live Demo https://reaishma.github.io/Cloud-based-business-intelligence-/
 - **Price Optimization** - XGBoost regression models
 
 ### 3. Model Performance
+
+![model performance](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Screenshot_20250904-122704_1.jpg)
+
+
 - Comprehensive model evaluation metrics
 - Cross-validation results and learning curves
 - Feature importance and correlation analysis
