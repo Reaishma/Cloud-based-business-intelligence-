@@ -107,6 +107,9 @@ View Live Demo https://reaishma.github.io/Cloud-based-business-intelligence-/
 - Real-time model monitoring and alerts
 
 ### 4. Business Insights
+
+![Business insights](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Screenshot_20250904-122745_1.jpg)
+
 - AI-powered strategic recommendations
 - Revenue intelligence and forecasting
 - Customer behavior analytics
