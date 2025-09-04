@@ -92,6 +92,9 @@ View Live Demo https://reaishma.github.io/Cloud-based-business-intelligence-/
 - Revenue analytics with trends
 
 ### 2. ML Workflows
+
+![ML Workflows](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Screenshot_20250904-122628_1.jpg)
+
 - **Sales Forecasting** - ARIMA + ML hybrid models
 - **Customer Segmentation** - K-means clustering with RFM analysis
 - **Churn Prediction** - Random Forest classification
