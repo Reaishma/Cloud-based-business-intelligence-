@@ -309,11 +309,13 @@ npx http-server . -p 8080
 
 ## 🎯 Key Components
 
-**Dashboard Pages**
-**Main Dashboard**: Real-time metrics and KPIs
-**ML Workflows**: Pipeline management and execution
-**Model Performance**: Comprehensive model analytics
-**Business Insights**: Strategic recommendations
+-**Dashboard Pages**
+-**Main Dashboard**: Real-time metrics and KPIs
+-**ML Workflows**: Pipeline management and execution
+-**Model Performance**: Comprehensive model analytics
+-**Business Insights**: Strategic recommendations
+
+![recommendations](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Screenshot_20250904-122725_1.jpg)
 
 ## ✅Interactive Features
 
