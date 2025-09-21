@@ -5,7 +5,8 @@ A comprehensive cloud-based business intelligence platform featuring machine lea
 ![Overview](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Screenshot_20250904-122836_1.jpg)
 
 # 🚀 Live Demo
-View Live Demo https://reaishma.github.io/Cloud-based-business-intelligence-/
+
+View Webpage on streamlit-  https://cl24pnhp39aqumazedfhht.streamlit.app/ML_workflows
 
 ## 🌟 Features
 
