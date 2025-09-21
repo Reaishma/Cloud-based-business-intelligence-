@@ -6,7 +6,7 @@ A comprehensive cloud-based business intelligence platform featuring machine lea
 
 # 🚀 Live Demo
 
-View Webpage on streamlit-  https://cl24pnhp39aqumazedfhht.streamlit.app/ML_workflows
+**View Webpage on streamlit**-  https://cl24pnhp39aqumazedfhht.streamlit.app/
 
 ## 🌟 Features
 
