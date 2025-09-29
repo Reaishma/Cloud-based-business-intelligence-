@@ -4,9 +4,13 @@ A comprehensive cloud-based business intelligence platform featuring machine lea
 
 ![Overview](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Screenshot_20250904-122836_1.jpg)
 
-# 🚀 Live Demo
+<div align="center">
 
-**View Webpage on streamlit**-  https://cl24pnhp39aqumazedfhht.streamlit.app/
+# 🚀 Access the project 
+
+**Try on streamlit -  https://cl24pnhp39aqumazedfhht.streamlit.app/**
+
+**Web Interface on
 
 ## 🌟 Features
 
