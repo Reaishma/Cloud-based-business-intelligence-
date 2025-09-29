@@ -10,7 +10,7 @@ A comprehensive cloud-based business intelligence platform featuring machine lea
 
 **Try on streamlit -  https://cl24pnhp39aqumazedfhht.streamlit.app/**
 
-**Web Interface on
+**Web Interface on https://reaishma.github.io/Cloud-based-business-intelligence-/**
 
 ## 🌟 Features
 
