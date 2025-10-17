@@ -107,7 +107,7 @@ A comprehensive cloud-based business intelligence platform featuring machine lea
 
 ### 3. Model Performance
 
-![model performance](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Screenshot_20250904-122704_1.jpg)
+![model performance](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Cl4.png)
 
 
 - Comprehensive model evaluation metrics
