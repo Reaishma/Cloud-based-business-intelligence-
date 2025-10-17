@@ -98,7 +98,7 @@ A comprehensive cloud-based business intelligence platform featuring machine lea
 
 ### 2. ML Workflows
 
-![ML Workflows](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Screenshot_20250904-122628_1.jpg)
+![ML Workflows](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Cl2.png)
 
 - **Sales Forecasting** - ARIMA + ML hybrid models
 - **Customer Segmentation** - K-means clustering with RFM analysis
