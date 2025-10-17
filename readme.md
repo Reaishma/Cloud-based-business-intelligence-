@@ -325,7 +325,7 @@ npx http-server . -p 8080
 - **Model Performance**: Comprehensive model analytics
 - **Business Insights**: Strategic recommendations
 
-![recommendations](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Screenshot_20250904-122725_1.jpg)
+![model comparison](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Cl6.png)
 
 ## ✅Interactive Features
 
