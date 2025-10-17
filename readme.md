@@ -117,7 +117,7 @@ A comprehensive cloud-based business intelligence platform featuring machine lea
 
 ### 4. Business Insights
 
-![Business insights](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Screenshot_20250904-122745_1.jpg)
+![Business insights](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Cl7.png)
 
 - AI-powered strategic recommendations
 - Revenue intelligence and forecasting
