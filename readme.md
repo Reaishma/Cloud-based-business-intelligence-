@@ -221,6 +221,7 @@ python tests/test_models.py
 ## 📋 Monitoring & Operations
 
 ### Model Monitoring
+![ml5](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Cl5.png)
 - Real-time performance tracking
 - Data drift detection
 - Automated retraining triggers
