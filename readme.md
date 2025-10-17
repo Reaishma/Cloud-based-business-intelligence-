@@ -150,7 +150,7 @@ A comprehensive cloud-based business intelligence platform featuring machine lea
 
 ## 🤖 Machine Learning Pipeline
 
-![ ml pipeline](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Screenshot_20250904-122825_1.jpg)
+![ ml pipeline](https://github.com/Reaishma/Cloud-based-business-intelligence-/blob/main/Cl3.png)
 
 ### Data Processing (`scripts/data_processing.py`)
 - ETL pipeline automation
